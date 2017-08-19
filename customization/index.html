@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 
   
@@ -35,6 +36,13 @@
   <script type="text/javascript" src="../js/highlight.pack.js"></script>
   <script src="../js/theme.js"></script> 
   <script src="https://use.fontawesome.com/540034d990.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-highlightjs/0.7.1/angular-highlightjs.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script src="../js/main.js"></script>
 
   
   <script>
@@ -102,11 +110,17 @@
                 
                     <li><a class="toctree-l4" href="#main-slideshow-carousel">Main Slideshow / Carousel</a></li>
                 
+                    <li><a class="toctree-l4" href="#3-banners-on-homepage">3 Banners on Homepage</a></li>
+                
                     <li><a class="toctree-l4" href="#featured-bestselling-new-in-product-tabs">Featured / Bestselling / New In Product Tabs</a></li>
                 
                     <li><a class="toctree-l4" href="#products-by-category">Products By Category</a></li>
                 
                     <li><a class="toctree-l4" href="#top-categories">Top Categories</a></li>
+                
+                    <li><a class="toctree-l4" href="#fullwidth-banner-on-homepage">Fullwidth Banner on Homepage</a></li>
+                
+                    <li><a class="toctree-l4" href="#brand-carousel">Brand Carousel</a></li>
                 
                     <li><a class="toctree-l4" href="#special-product-columns">Special Product Columns</a></li>
                 
@@ -165,7 +179,430 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h1>
+                <script>
+  angular.module("app", ['hljs']);
+</script>
+
+<div ng-app="app">
+  <!-- Modal -->
+  <div class="modal fade" id="bannersBlockHome01Modal" tabindex="-1" role="dialog" aria-labelledby="bannersBlockHome01ModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bannersBlockHome01ModalLabel">Code Generator: Banners Block Home 01</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+                <div class="panel-group" id="bannersBlockHome01Accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome01Banner1Heading">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#bannersBlockHome01Accordion" href="#bannersBlockHome01Banner1Collapse" aria-expanded="true" aria-controls="bannersBlockHome01Banner1Collapse">
+                          Banner 1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome01Banner1Collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="bannersBlockHome01Banner1Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner1Img">Image URL:</label>
+                          <input ng-model="banner1_img" type="text" class="form-control" id="bannersBlockHome01Banner1Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner1Alt">Image Alt:</label>
+                          <input ng-model="banner1_alt" type="text" class="form-control" id="bannersBlockHome01Banner1Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner1Link">Link URL:</label>
+                          <input ng-model="banner1_link" type="text" class="form-control" id="bannersBlockHome01Banner1Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome01Banner2Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome01Accordion" href="#bannersBlockHome01Banner2Collapse" aria-expanded="false" aria-controls="bannersBlockHome01Banner2Collapse">
+                          Banner 2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome01Banner2Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome01Banner2Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner2Img">Image URL:</label>
+                          <input ng-model="banner2_img" type="text" class="form-control" id="bannersBlockHome01Banner2Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner2Alt">Image Alt:</label>
+                          <input ng-model="banner2_alt" type="text" class="form-control" id="bannersBlockHome01Banner2Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner2Link">Link URL:</label>
+                          <input ng-model="banner2_link" type="text" class="form-control" id="bannersBlockHome01Banner2Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome01Banner3Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome01Accordion" href="#bannersBlockHome01Banner3Collapse" aria-expanded="false" aria-controls="bannersBlockHome01Banner3Collapse">
+                          Banner 3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome01Banner3Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome01Banner3Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner3Img">Image URL:</label>
+                          <input ng-model="banner3_img" type="text" class="form-control" id="bannersBlockHome01Banner3Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner3Alt">Image Alt:</label>
+                          <input ng-model="banner3_alt" type="text" class="form-control" id="bannersBlockHome01Banner3Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome01Banner3Link">Link URL:</label>
+                          <input ng-model="banner3_link" type="text" class="form-control" id="bannersBlockHome01Banner3Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div hljs include="'/samples/bannersBlockHome01.txt'" compile="true" id="bannersBlockHome01Code" class="highlight-code"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-clipboard-target="#bannersBlockHome01Code">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal #bannersBlockHome01Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="bannersBlockHome02Modal" tabindex="-1" role="dialog" aria-labelledby="bannersBlockHome02ModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bannersBlockHome02ModalLabel">Code Generator: Banners Block Home 02</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+                <div class="panel-group" id="bannersBlockHome02Accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome02BannerHeading">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#bannersBlockHome02Accordion" href="#bannersBlockHome02BannerCollapse" aria-expanded="true" aria-controls="bannersBlockHome02BannerCollapse">
+                          Banner
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome02BannerCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="bannersBlockHome02BannerHeading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome02BannerImg">Image URL:</label>
+                          <input ng-model="banner_img" type="text" class="form-control" id="bannersBlockHome02BannerImg" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner04.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome02BannerAlt">Image Alt:</label>
+                          <input ng-model="banner_alt" type="text" class="form-control" id="bannersBlockHome02BannerAlt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome02BannerLink">Link URL:</label>
+                          <input ng-model="banner_link" type="text" class="form-control" id="bannersBlockHome02BannerLink" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div hljs include="'/samples/bannersBlockHome02.txt'" compile="true" id="bannersBlockHome02Code" class="highlight-code"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-clipboard-target="#bannersBlockHome02Code">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal #bannersBlockHome02Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="bannersBlockHome03Modal" tabindex="-1" role="dialog" aria-labelledby="bannersBlockHome03ModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bannersBlockHome03ModalLabel">Code Generator: Banners Block Home 03</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+                <div class="panel-group" id="bannersBlockHome03Accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner1Heading">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner1Collapse" aria-expanded="true" aria-controls="bannersBlockHome03Banner1Collapse">
+                          Banner 1
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner1Collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="bannersBlockHome03Banner1Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner1Img">Image URL:</label>
+                          <input ng-model="banner1_img" type="text" class="form-control" id="bannersBlockHome03Banner1Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner1Alt">Image Alt:</label>
+                          <input ng-model="banner1_alt" type="text" class="form-control" id="bannersBlockHome03Banner1Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner1Link">Link URL:</label>
+                          <input ng-model="banner1_link" type="text" class="form-control" id="bannersBlockHome03Banner1Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner2Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner2Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner2Collapse">
+                          Banner 2
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner2Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner2Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner2Img">Image URL:</label>
+                          <input ng-model="banner2_img" type="text" class="form-control" id="bannersBlockHome03Banner2Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner2Alt">Image Alt:</label>
+                          <input ng-model="banner2_alt" type="text" class="form-control" id="bannersBlockHome03Banner2Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner2Link">Link URL:</label>
+                          <input ng-model="banner2_link" type="text" class="form-control" id="bannersBlockHome03Banner2Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner3Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner3Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner3Collapse">
+                          Banner 3
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner3Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner3Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner3Img">Image URL:</label>
+                          <input ng-model="banner3_img" type="text" class="form-control" id="bannersBlockHome03Banner3Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner3Alt">Image Alt:</label>
+                          <input ng-model="banner3_alt" type="text" class="form-control" id="bannersBlockHome03Banner3Alt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner3Link">Link URL:</label>
+                          <input ng-model="banner3_link" type="text" class="form-control" id="bannersBlockHome03Banner3Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner4Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner4Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner4Collapse">
+                          Banner 4
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner4Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner4Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner4Img">Image URL:</label>
+                          <input ng-model="banner4_img" type="text" class="form-control" id="bannersBlockHome03Banner4Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner4Alt">Image Alt:</label>
+                          <input ng-model="banner4_alt" type="text" class="form-control" id="bannersBlockHome03Banner4Alt" placeholder="Example: Banner 4">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner4Link">Link URL:</label>
+                          <input ng-model="banner4_link" type="text" class="form-control" id="bannersBlockHome03Banner4Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner5Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner5Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner5Collapse">
+                          Banner 5
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner5Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner5Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner5Img">Image URL:</label>
+                          <input ng-model="banner5_img" type="text" class="form-control" id="bannersBlockHome03Banner5Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner5Alt">Image Alt:</label>
+                          <input ng-model="banner5_alt" type="text" class="form-control" id="bannersBlockHome03Banner5Alt" placeholder="Example: Banner 5">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner5Link">Link URL:</label>
+                          <input ng-model="banner5_link" type="text" class="form-control" id="bannersBlockHome03Banner5Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner6Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner6Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner6Collapse">
+                          Banner 6
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner6Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner6Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner6Img">Image URL:</label>
+                          <input ng-model="banner6_img" type="text" class="form-control" id="bannersBlockHome03Banner6Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner6Alt">Image Alt:</label>
+                          <input ng-model="banner6_alt" type="text" class="form-control" id="bannersBlockHome03Banner6Alt" placeholder="Example: Banner 6">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner6Link">Link URL:</label>
+                          <input ng-model="banner6_link" type="text" class="form-control" id="bannersBlockHome03Banner6Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner7Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner7Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner7Collapse">
+                          Banner 7
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner7Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner7Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner7Img">Image URL:</label>
+                          <input ng-model="banner7_img" type="text" class="form-control" id="bannersBlockHome03Banner7Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner7Alt">Image Alt:</label>
+                          <input ng-model="banner7_alt" type="text" class="form-control" id="bannersBlockHome03Banner7Alt" placeholder="Example: Banner 7">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner7Link">Link URL:</label>
+                          <input ng-model="banner7_link" type="text" class="form-control" id="bannersBlockHome03Banner7Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner8Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner8Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner8Collapse">
+                          Banner 8
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner8Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner8Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner8Img">Image URL:</label>
+                          <input ng-model="banner8_img" type="text" class="form-control" id="bannersBlockHome03Banner8Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner8Alt">Image Alt:</label>
+                          <input ng-model="banner8_alt" type="text" class="form-control" id="bannersBlockHome03Banner8Alt" placeholder="Example: Banner 8">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner8Link">Link URL:</label>
+                          <input ng-model="banner8_link" type="text" class="form-control" id="bannersBlockHome03Banner8Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner9Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner9Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner9Collapse">
+                          Banner 9
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner9Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner9Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner9Img">Image URL:</label>
+                          <input ng-model="banner9_img" type="text" class="form-control" id="bannersBlockHome03Banner9Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner9Alt">Image Alt:</label>
+                          <input ng-model="banner9_alt" type="text" class="form-control" id="bannersBlockHome03Banner9Alt" placeholder="Example: Banner 9">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner9Link">Link URL:</label>
+                          <input ng-model="banner9_link" type="text" class="form-control" id="bannersBlockHome03Banner9Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockHome03Banner10Heading">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#bannersBlockHome03Accordion" href="#bannersBlockHome03Banner10Collapse" aria-expanded="false" aria-controls="bannersBlockHome03Banner10Collapse">
+                          Banner 10
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockHome03Banner10Collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="bannersBlockHome03Banner10Heading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner10Img">Image URL:</label>
+                          <input ng-model="banner10_img" type="text" class="form-control" id="bannersBlockHome03Banner10Img" placeholder="Example: https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner10Alt">Image Alt:</label>
+                          <input ng-model="banner10_alt" type="text" class="form-control" id="bannersBlockHome03Banner10Alt" placeholder="Example: Banner 10">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockHome03Banner10Link">Link URL:</label>
+                          <input ng-model="banner10_link" type="text" class="form-control" id="bannersBlockHome03Banner10Link" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div hljs include="'/samples/bannersBlockHome03.txt'" compile="true" id="bannersBlockHome03Code" class="highlight-code"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-clipboard-target="#bannersBlockHome03Code">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal #bannersBlockHome03Modal -->
+</div>
+
+<h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h1>
 <p>This page will explain all configuration available and how to edit each section appear on theme. Let's view the first homepage.</p>
 <p><img alt="Homepage of Default Style" src="../img/home1.jpg" /></p>
 <h2 id="top-banner">Top Banner<a class="headerlink" href="#top-banner" title="Permanent link">&para;</a></h2>
@@ -216,6 +653,42 @@
 <p><img alt="Theme editor carousel" src="../img/theme-editor-carousel.png" /></p>
 <h3 id="hide-the-slideshow">Hide the slideshow<a class="headerlink" href="#hide-the-slideshow" title="Permanent link">&para;</a></h3>
 <p>To hide the slideshow on homepage, uncheck on the checkbox <strong>Show Carousel</strong> in section <strong>Carousel</strong> of the Theme Editor.</p>
+<h2 id="3-banners-on-homepage">3 Banners on Homepage<a class="headerlink" href="#3-banners-on-homepage" title="Permanent link">&para;</a></h2>
+<p><img alt="3 banners on homepage" src="../img/home1-3-banners.jpg" /></p>
+<p>To show these banners on homepage, from your admin page &gt; <strong>Marketing</strong> &gt; <strong>Banners </strong>&gt; click button <strong>Create a Banner</strong>. In field <strong>Banner Content</strong>, click button HTML to open <strong>HTML Source Editor</strong>, input content below:</p>
+<pre><code class="html">&lt;div id=&quot;emthemesModezBannersBlockHome01&quot; class=&quot;emthemesModez-section  emthemesModez-section--banners-3x&quot;&gt;
+&lt;div class=&quot;emthemesModez-section-inner&quot;&gt;
+&lt;div class=&quot;emthemesModez-bannersContainer 
+            emthemesModez-bannersContainer--onethird-x3 
+            emthemesModez-bannersContainer--onethird-x3-1 
+            &quot;&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-container&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; src=&quot;https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner01.jpg&quot; alt=&quot;Sample banner 1&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-container&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; src=&quot;https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner02.jpg&quot; alt=&quot;Sample banner 2&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-container&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; src=&quot;https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner03.jpg&quot; alt=&quot;Sample banner 3&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Or use button below to generate the code with your own banners:</p>
+<!-- Button trigger modal -->
+
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockHome01Modal">
+  Launch Banner Code Generator
+</button></p>
+<p><img alt="Edit homepage 3 banners" src="../img/edit-home1-3-banners.png" /></p>
+<p>Then click <strong>Update</strong> button to go back previous screen.</p>
+<p>Choose <strong>Show on Page</strong> is <strong>Home Page</strong>.</p>
+<p>Choose <strong>Location</strong> is <strong>Top of Page</strong>.</p>
+<p><img alt="Show on Page &amp; Location" src="../img/edit-banner-show-on-page-location.png" /></p>
+<p>Click <strong>Save</strong> button to finish.</p>
+<p>You can freely edit the HTML above to change banner images or link but keep the HTML attribute <code>id="emthemesModezBannersBlockHome01"</code> unchanged.</p>
 <h2 id="featured-bestselling-new-in-product-tabs">Featured / Bestselling / New In Product Tabs<a class="headerlink" href="#featured-bestselling-new-in-product-tabs" title="Permanent link">&para;</a></h2>
 <p><img alt="Special products tabs" src="../img/home1-special-product-tabs.jpg" /></p>
 <p>You can configure this section in <strong>Theme Editor</strong> &gt; <strong>Homepage</strong>:</p>
@@ -235,6 +708,68 @@
 <h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link">&para;</a></h3>
 <p>You can configure number of categories to display in <strong>Theme Editor</strong> &gt; <strong>Homepage</strong> &gt; <strong>Top Categories</strong>:</p>
 <p><img alt="Configure Top Categories" src="../img/theme-editor-top-categories.png" /></p>
+<h2 id="fullwidth-banner-on-homepage">Fullwidth Banner on Homepage<a class="headerlink" href="#fullwidth-banner-on-homepage" title="Permanent link">&para;</a></h2>
+<p><img alt="fullwidth banner on homepage" src="../img/home1-fullwidth-banner.jpg" /></p>
+<p>To show these banners on homepage, from your admin page &gt; <strong>Marketing</strong> &gt; <strong>Banners </strong>&gt; click button <strong>Create a Banner</strong>. In field <strong>Banner Content</strong>, click button HTML to open <strong>HTML Source Editor</strong>, input content below:</p>
+<pre><code class="html">&lt;div id=&quot;emthemesModezBannersBlockHome02&quot; class=&quot;emthemesModez-section  emthemesModez-section--banners-one&quot;&gt;
+&lt;div class=&quot;emthemesModez-section-inner&quot;&gt;
+&lt;div class=&quot;emthemesModez-bannersContainer 
+            emthemesModez-bannersContainer--one 
+            emthemesModez-bannersContainer--one-1 
+            &quot;&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-container&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; src=&quot;https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner04.jpg&quot; alt=&quot;sample fullwidth banner&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Or use button below to generate the code with your own banners:</p>
+<!-- Button trigger modal -->
+
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockHome02Modal">
+  Launch Banner Code Generator
+</button></p>
+<p><img alt="Edit homepage fullwidth banner" src="../img/edit-home1-fullwidth-banner.png" /></p>
+<p>Then click <strong>Update</strong> button to go back previous screen.</p>
+<p>Choose <strong>Show on Page</strong> is <strong>Home Page</strong>.</p>
+<p>Choose <strong>Location</strong> is <strong>Top of Page</strong>.</p>
+<p><img alt="Show on Page &amp; Location" src="../img/edit-banner-show-on-page-location.png" /></p>
+<p>Click <strong>Save</strong> button to finish.</p>
+<p>You can freely edit the HTML above to change banner images or link but keep the HTML attribute <code>id="emthemesModezBannersBlockHome02"</code> unchanged.</p>
+<h2 id="brand-carousel">Brand Carousel<a class="headerlink" href="#brand-carousel" title="Permanent link">&para;</a></h2>
+<p><img alt="Brand Carousel" src="../img/home1-brand-carousel.png" /></p>
+<p>To show this carousel on homepage, from your admin page &gt; <strong>Marketing</strong> &gt; <strong>Banners </strong>&gt; click button <strong>Create a Banner</strong>. In field <strong>Banner Content</strong>, click button HTML to open <strong>HTML Source Editor</strong>, input content below:</p>
+<pre><code class="html">&lt;div id=&quot;emthemesModezBannersBlockHome03&quot; class=&quot;emthemesModez-brandCarousel-container&quot; data-section-type=&quot;brands-logo&quot;&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel&quot; data-emthemesmodez-brand-carousel=&quot;&quot;&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png&quot; alt=&quot;Sample Brand 1&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png&quot; alt=&quot;Sample Brand 2&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png&quot; alt=&quot;Sample Brand 3&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png&quot; alt=&quot;Sample Brand 4&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png&quot; alt=&quot;Sample Brand 5&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png&quot; alt=&quot;Sample Brand 6&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png&quot; alt=&quot;Sample Brand 7&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png&quot; alt=&quot;Sample Brand 8&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png&quot; alt=&quot;Sample Brand 9&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;emthemesModez-brandCarousel-slide&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png&quot; alt=&quot;Sample Brand 10&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Or use button below to generate the code:</p>
+<!-- Button trigger modal -->
+
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockHome03Modal">
+  Launch Banner Code Generator
+</button></p>
+<p><img alt="Edit homepage fullwidth banner" src="../img/edit-home1-fullwidth-banner.png" /></p>
+<p>Then click <strong>Update</strong> button to go back previous screen.</p>
+<p>Choose <strong>Show on Page</strong> is <strong>Home Page</strong>.</p>
+<p>Choose <strong>Location</strong> is <strong>Top of Page</strong>.</p>
+<p><img alt="Show on Page &amp; Location" src="../img/edit-banner-show-on-page-location.png" /></p>
+<p>Click <strong>Save</strong> button to finish.</p>
+<p>You can freely edit the HTML above to change banner images or link but keep the HTML attribute <code>id="emthemesModezBannersBlockHome03"</code> unchanged.</p>
 <h2 id="special-product-columns">Special Product Columns<a class="headerlink" href="#special-product-columns" title="Permanent link">&para;</a></h2>
 <p><img alt="Special product columns" src="../img/home1-special-product-columns.jpg" /></p>
 <p>This block show bestselling products, featured products, new products in columns.</p>
