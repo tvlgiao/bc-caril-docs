@@ -104,6 +104,8 @@
             
                 <li class="toctree-l3"><a href="#customization">Customization</a></li>
                 
+                    <li><a class="toctree-l4" href="#use-fixed-vertical-menu-layout-across-the-whole-site">Use Fixed Vertical Menu layout across the whole site</a></li>
+                
                     <li><a class="toctree-l4" href="#top-banner">Top Banner</a></li>
                 
                     <li><a class="toctree-l4" href="#header">Header</a></li>
@@ -131,6 +133,10 @@
                     <li><a class="toctree-l4" href="#footer-payment-icons">Footer - Payment Icons</a></li>
                 
                     <li><a class="toctree-l4" href="#footer-credit-links">Footer - Credit Links</a></li>
+                
+                    <li><a class="toctree-l4" href="#banners-on-the-left-sidebar">Banners on the Left Sidebar</a></li>
+                
+                    <li><a class="toctree-l4" href="#facebook-like-page-on-the-left-sidebar">Facebook Like Page on the Left Sidebar</a></li>
                 
                     <li><a class="toctree-l4" href="#add-our-own-css-sass-code">Add our own CSS (Sass) code</a></li>
                 
@@ -600,11 +606,127 @@
       </div>
     </div>
   </div><!-- modal #bannersBlockHome03Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="bannersBlockSidebarImgModal" tabindex="-1" role="dialog" aria-labelledby="bannersBlockSidebarImgModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bannersBlockSidebarImgModalLabel">Code Generator: Banners Block on Sidebar</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+                <div class="panel-group" id="bannersBlockSidebarImgAccordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockSidebarImgBannerHeading">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#bannersBlockSidebarImgAccordion" href="#bannersBlockSidebarImgBannerCollapse" aria-expanded="true" aria-controls="bannersBlockSidebarImgBannerCollapse">
+                          Banner
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockSidebarImgBannerCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="bannersBlockSidebarImgBannerHeading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarImgBannerPosition">Position:</label>
+                          <select ng-model="banner_position" class="form-control" id="bannersBlockSidebarImgBannerPosition">
+                            <option value="01">Before Facebook Block</option>
+                            <option value="02">After Facebook Block</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarImgBannerImg">Image URL:</label>
+                          <input ng-model="banner_img" type="text" class="form-control" id="bannersBlockSidebarImgBannerImg" placeholder="Example: https://placehold.it/270x450">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarImgBannerAlt">Image Alt:</label>
+                          <input ng-model="banner_alt" type="text" class="form-control" id="bannersBlockSidebarImgBannerAlt" placeholder="Example: Banner 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarImgBannerLink">Link URL:</label>
+                          <input ng-model="banner_link" type="text" class="form-control" id="bannersBlockSidebarImgBannerLink" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div hljs include="'/samples/bannersBlockSidebarImg.txt'" compile="true" id="bannersBlockSidebarImgCode" class="highlight-code"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-clipboard-target="#bannersBlockSidebarImgCode">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal #bannersBlockSidebarImgModal -->
+  <!-- Modal -->
+  <div class="modal fade" id="bannersBlockSidebarTextBlockModal" tabindex="-1" role="dialog" aria-labelledby="bannersBlockSidebarTextBlockModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="bannersBlockSidebarTextBlockModalLabel">Code Generator: Text Block on Sidebar</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+                <div class="panel-group" id="bannersBlockSidebarTextBlockAccordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="bannersBlockSidebarTextBlockPanelHeading">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#bannersBlockSidebarTextBlockAccordion" href="#bannersBlockSidebarTextBlockCollapse" aria-expanded="true" aria-controls="bannersBlockSidebarTextBlockCollapse">
+                          Banner
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="bannersBlockSidebarTextBlockCollapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="bannersBlockSidebarTextBlockPanelHeading">
+                      <div class="panel-body">
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarTextBlockPosition">Position:</label>
+                          <select ng-model="position" class="form-control" id="bannersBlockSidebarTextBlockPosition">
+                            <option value="01">Before Facebook Block</option>
+                            <option value="02">After Facebook Block</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarTextBlockHeading">Heading:</label>
+                          <input ng-model="heading" type="text" class="form-control" id="bannersBlockSidebarTextBlockHeading" placeholder="Example: Custom Block">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarTextBlockBannerContent">Content:</label>
+                          <textarea ng-model="content" type="text" class="form-control" id="bannersBlockSidebarTextBlockBannerContent" placeholder="Custom block displayed at the left sidebar. You can put your own content here: text, html, images, media... whatever you like. Here are many similar sample content placeholders across the store. All editable from admin panel. Sample Button"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarTextBlockButtonText">Button Text:</label>
+                          <input ng-model="btn_text" type="text" class="form-control" id="bannersBlockSidebarTextBlockButtonText" placeholder="Example: Sample Button">
+                        </div>
+                        <div class="form-group">
+                          <label for="bannersBlockSidebarTextBlockButtonLink">Button URL:</label>
+                          <input ng-model="btn_link" type="text" class="form-control" id="bannersBlockSidebarTextBlockButtonLink" placeholder="Example: https://supermarket-blue-demo.mybigcommerce.com">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div hljs include="'/samples/bannersBlockSidebarTextBlock.txt'" compile="true" id="bannersBlockSidebarTextBlockCode" class="highlight-code"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-clipboard-target="#bannersBlockSidebarTextBlockCode">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- modal #bannersBlockSidebarTextBlockModal -->
 </div>
 
 <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h1>
 <p>This page will explain all configuration available and how to edit each section appear on theme. Let's view the first homepage.</p>
 <p><img alt="Homepage of Default Style" src="../img/home1.jpg" /></p>
+<h2 id="use-fixed-vertical-menu-layout-across-the-whole-site">Use Fixed Vertical Menu layout across the whole site<a class="headerlink" href="#use-fixed-vertical-menu-layout-across-the-whole-site" title="Permanent link">&para;</a></h2>
+<p><img alt="fixed vertical menu layout" src="../img/home1-left-sidebar.jpg" /></p>
+<p>You can enable this layout in <strong>Theme Editor</strong> &gt; <strong>Global</strong> &gt; <strong>Layout</strong>, choose <code>Left Sidebar</code>:</p>
+<p><img alt="Theme editor layout" src="../img/theme-editor-layout.png" /></p>
 <h2 id="top-banner">Top Banner<a class="headerlink" href="#top-banner" title="Permanent link">&para;</a></h2>
 <p><img alt="Top Banner" src="../img/home1-top-banner.png" /></p>
 <p>The top banner can be showed / edited in admin page &gt; <strong>Marketing</strong> &gt; <strong>Banners</strong>. When you add / edit remember to choose <strong>Location</strong> is <strong>Top of Page</strong>.</p>
@@ -790,6 +912,91 @@
 <h2 id="footer-credit-links">Footer - Credit Links<a class="headerlink" href="#footer-credit-links" title="Permanent link">&para;</a></h2>
 <p><img alt="Theme editor credit links" src="../img/theme-editor-credits.png" /></p>
 <p>To show/hide the credit links, go to Theme Editor &gt; <strong>Footer</strong> section, tick or untick the checkboxes as showing above.</p>
+<h2 id="banners-on-the-left-sidebar">Banners on the Left Sidebar<a class="headerlink" href="#banners-on-the-left-sidebar" title="Permanent link">&para;</a></h2>
+<h3 id="show-a-banner-above-facebook-like-page-block">Show a banner above Facebook Like Page block<a class="headerlink" href="#show-a-banner-above-facebook-like-page-block" title="Permanent link">&para;</a></h3>
+<p><img alt="sidebar banner 1" src="../img/home1-sidebar-banner1.jpg" /></p>
+<p>To show this banner, go to Marketing &gt; Banners, click button <strong>Create a Banner</strong>. Input:</p>
+<ul>
+<li><strong>Banner Name</strong>: whatever you want</li>
+<li><strong>Banner Content</strong>: click the square button <code>HTML</code> to open HTML source code editor.</li>
+</ul>
+<p>Copy and paste the sample code below:</p>
+<pre><code>&lt;div class=&quot;sidebarBlock sidebarBlock--banner emthemesModezBannersBlockSidebar01&quot;&gt;
+&lt;div class=&quot;emthemesModez-bannersContainer&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-figure&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; title=&quot;Sample Banner&quot; src=&quot;https://placehold.it/270x450&quot; alt=&quot;Sample Banner&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Or you can use this tool to generate your banner content:</p>
+<!-- Button trigger modal -->
+
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockSidebarImgModal">
+  Launch Banner Code Generator
+</button></p>
+<ul>
+<li><strong>Show on Page</strong>: <code>Search Results Page</code></li>
+<li><strong>Visible</strong>: Checked</li>
+<li><strong>Location</strong>: <code>Top of Page</code></li>
+</ul>
+<h3 id="show-banners-text-block-below-facebook-like-page-block">Show banners &amp; text block below Facebook Like Page block<a class="headerlink" href="#show-banners-text-block-below-facebook-like-page-block" title="Permanent link">&para;</a></h3>
+<p><img alt="sidebar banner 2" src="../img/home1-sidebar-banner2.jpg" /></p>
+<p>To show this banner and the text block, go to Marketing &gt; Banners, click button <strong>Create a Banner</strong>. Input:</p>
+<ul>
+<li><strong>Banner Name</strong>: whatever you want</li>
+<li><strong>Banner Content</strong>: click the square button <code>HTML</code> to open HTML source code editor.</li>
+</ul>
+<p>Copy and paste the sample code below:</p>
+<pre><code>&lt;!-- Banner --&gt;
+&lt;div class=&quot;sidebarBlock sidebarBlock--banner emthemesModezBannersBlockSidebar02&quot;&gt;
+&lt;div class=&quot;emthemesModez-bannersContainer&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-figure&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; title=&quot;Fullscreen Banner&quot; src=&quot;https://placehold.it/270x270&quot; alt=&quot;Sample Banner&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Text Block --&gt;
+&lt;div class=&quot;sidebarBlock sidebarBlock--textBlock sidebarBlock--mobileCollapsible emthemesModezBannersBlockSidebar02&quot;&gt;
+&lt;h5 class=&quot;sidebarBlock-heading is-open&quot; data-collapsible=&quot;#sidebar-textBlock01&quot; data-collapsible-disabled-breakpoint=&quot;medium&quot;&gt;Custom Block&lt;/h5&gt;
+&lt;div id=&quot;sidebar-textBlock01&quot; class=&quot;sidebarBlock-content is-open&quot;&gt;
+&lt;p&gt;Custom block displayed at the left sidebar. You can put your own content here: text, html, images, media... whatever you like.&lt;/p&gt;
+&lt;p&gt;Here are many similar sample content placeholders across the store. All editable from admin panel.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Sample Button&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Banner --&gt;
+&lt;div class=&quot;sidebarBlock sidebarBlock--banner emthemesModezBannersBlockSidebar02&quot;&gt;
+&lt;div class=&quot;emthemesModez-bannersContainer&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner&quot;&gt;
+&lt;div class=&quot;emthemesModez-banner-figure&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img class=&quot;emthemesModez-banner-image&quot; title=&quot;Fullscreen Banner&quot; src=&quot;https://placehold.it/270x450&quot; alt=&quot;Sample Banner&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Or you can use this tool to generate your banner &amp; text block content:</p>
+<!-- Button trigger modal -->
+
+<p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockSidebarImgModal">
+  Launch Banner Code Generator
+</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockSidebarTextBlockModal">
+  Launch Text Block Code Generator
+</button></p>
+<ul>
+<li><strong>Show on Page</strong>: <code>Search Results Page</code></li>
+<li><strong>Visible</strong>: Checked</li>
+<li><strong>Location</strong>: <code>Top of Page</code></li>
+</ul>
+<h2 id="facebook-like-page-on-the-left-sidebar">Facebook Like Page on the Left Sidebar<a class="headerlink" href="#facebook-like-page-on-the-left-sidebar" title="Permanent link">&para;</a></h2>
+<p><img alt="Facebook like page" src="../img/home1-facebook-like-page.jpg" /></p>
+<p>You can show your own Facebook Like Page block or hide it completely. </p>
+<p>From <strong>Theme Editor</strong> &gt; <strong>Social Media Icons</strong> &gt; Enter your facebook page name in <strong>Facebook page</strong> field. For example if your Facebook page URL is <a href="https://www.facebook.com/papathemes/">https://www.facebook.com/papathemes/</a> you should only input <code>papathemes</code>.</p>
+<p>To hide this block, just leave it empty value.</p>
 <h2 id="add-our-own-css-sass-code">Add our own CSS (Sass) code<a class="headerlink" href="#add-our-own-css-sass-code" title="Permanent link">&para;</a></h2>
 <p>To add your own custom CSS code you can edit the file <code>assets/scss/_theme-custom.scss</code> in <strong>Edit Theme Files</strong> editor:</p>
 <p><img alt="Edit file _theme-custom.scss" src="../img/edit-file-theme-custom-css.png" /></p>
