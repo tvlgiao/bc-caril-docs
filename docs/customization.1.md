@@ -1004,24 +1004,236 @@
 
 # Customization
 
+This page will explain all configuration available and how to edit each section appear on theme. Let's view the first homepage.
+
+![Homepage of Default Style](img/home1.jpg)
+
+
+
+<!-- 
+## Use Fixed Vertical Menu layout across the whole site
+
+![fixed vertical menu layout](img/home1-left-sidebar.jpg)
+
+You can enable this layout in __Theme Editor__ > __Global__ > __Layout__, choose `Left Sidebar`:
+
+![Theme editor layout](img/theme-editor-layout.png)
+ -->
+
+
+
+
+## Vertical mega menu vs. Slide down menu
+
+__Note: slide down menu only works with Fixed vertical menu layout.__
+
+
+__Mega menu__ (default):
+
+![Mega menu](img/home1-mega-menu.jpg)
+
+__Slide down menu__:
+
+![Slidedown menu](img/home1-slidedown-menu.jpg)
+
+You can switch the default mega menu to slide down menu in **Theme Editor** > **Header** > tick to **Showing sub-categories vertical**:
+
+![subcategories vertical menu](img/theme-editor-subcategories-vertical-menu.png)
+
+
+
+
+## Top Banner
+
+![Top Banner](img/home1-top-banner.png)
+
+The top banner can be showed / edited in admin page > __Marketing__ > __Banners__. When you add / edit remember to choose __Location__ is __Top of Page__.
+
+### Colors Customization
+
+To customize colors of this section, go to admin page > __Storefront Design__ > __My Themes__, click button __Customize__ of the current theme to open the Theme Editor. 
+
+![Click customize theme](img/click-customize-theme.png)
+
+Look into the options showing below:
+
+![Theme editor top banner](img/theme-editor-top-banner.png)
+
+
+
 ## Header
+<!-- 
+### Header Styles
+This theme support 3 different header styles:
+- Logo at left
+- Logo at center
+- Logo at right
 
-![Header](img/home1-header.png)
+![Header Logo at left](img/home1-header-left.png)
 
-* Top promotion banner can be added in **Marketing** > **Banners**, choose display location is **Top of Page**.
-* Address and phone number can be edited in **Store Setup** > **Store Profile**.
-* You can change colors, typography and customize header in **Theme Editor** > **Header**.
-* You can also toggle on/off page links in **Theme Editor** > **Header** > **Page navigation** > **Hide Content Pages in Main Menu**.
+![Header Logo at center](img/home1-header-center.png)
+
+![Header Logo at right](img/home1-header-right.png)
+
+To configure, open the __Theme Editor__, scroll down to section __Logo__, click to expand the logo options. Choose a certain option of __Logo position__, then click __Refresh__ button appear after.
+
+![Change logo position](img/change-logo-position.png)
+ -->
+<!-- 
+### Welcome Text
+
+![Welcome text](img/home1-welcome-text.png)
+
+This welcome text can be showed/hide in the __Theme Editor__ > __Header__ > __Show welcome text__:
+
+![Toggle show/ide welcome text](img/theme-editor-show-welcome-text.png)
+
+You can edit the text in the language file `lang/en.json` in __Edit Theme Files__:
+
+![Edit language for welcome text](img/edit-language-welcome-text.png)
+ -->
+
+
+### Phone Number & Store Address
+![Header info text](img/home1-infobar.png)
+
+Store address and phone number are pulled out from your store profile. You can edit it in __Store Setup__ > __Store Profile__:
+
+![Edit Store Address and Phone](img/edit-store-address-phone.png)
+
+<!-- 
+### Social Media Icons
+
+![Social media icons on header](img/home1-header-social-icons.png)
+
+This social media icons group can be turned on/off in __Theme Editor__ > __Social Media Icons__ > __Placement__ > __Top/Right__:
+
+![Configure social icons on header](img/theme-editor-social-icons-top.png)
+
+To configure your social media links, go to admin page > __Storefront Design__ > __Design Options__ > __Social Media__ section:
+
+![Edit social media links](img/edit-social-media-icons.png)
+ -->
+
+### Colors Customization
+
+To customize colors of the header section, look into the options showing below in the Theme Editor:
+
+![Theme editor header](img/theme-editor-header.png)
+
+
+## Main Menu
+
+![Main menu](img/home1-main-menu.jpg)
+
+This menu automatically show your web page links if visible.
+
+You can hide this menu bar completely or enable custom content, custom links in this posible in **Theme Editor** > **Header** > **Page Navigation**:
+
+![theme editor page navigation](img/theme-editor-page-navigation.png)
+
+- **Hide Content Pages in Main Menu**: if checked will hide all this menu bar completely.
+- **Use manual links in Main Menu**: if checked will allow you enter custom content or custom links in **Marketing** > **Banners**. Use this tool below to generate your own links.
+
+### Manually input links in Main Menu
+
+Theme allow you input your own links manually in this menu area. First tick on the check box **Use manual links in Main Menu** in **Theme Editor**.
+
+Go to **Marketing** > **Banners**, click button **Create a Banner**. In field **Banner Content**, click button HTML to open **HTML Source Editor**, input sample content below:
+
+```html
+<ul id="emthemesModezBannersBlockStaticNavPages" class="navPages-list">
+<li class="navPages-item"><a class="navPages-action" href="/">Home</a></li>
+<li class="navPages-item"><a class="navPages-action" href="/about-us">About Us</a></li>
+<li class="navPages-item"><a class="navPages-action" href="/contact">Contact Us</a></li>
+<li class="navPages-item"><a class="navPages-action" href="/link-1">Link 1</a></li>
+<li class="navPages-item"><a class="navPages-action" href="/link-2">Link 2</a></li>
+</ul>
+```
+
+Or use button below to generate the code with your own banners:
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockStaticNavPagesModal">
+  Launch Main Menu Code Generator
+</button>
 
 
 
 
-## Main Carousel
 
-![Main carousel](img/home1-main-carousel.jpg)
 
-* You can edit main carousel slides in **Storefront** > **Home Page Carousel**.
-* Change colors in **Theme Editor** > **Carousel**.
+## Banner below header
+
+![banner below header](img/home1-banner-below-header.png)
+
+You can enable this banner on all pages or all other pages except homepage in **Theme Editor** > **Banners** > **Banner after header**:
+
+![configure banner after header](img/theme-editor-banner-after-header.png)
+
+
+
+After enabled, you can edit banner content by go to **Marketing** > **Banners**, click button **Create a Banner**. Input:
+
+- __Banner Name__: whatever you want
+- __Banner Content__: click the square button `HTML` to open HTML source code editor.
+
+Copy and paste the sample code below:
+
+```html
+<div id="emthemesModezBannersBlockAfterHeader" class="container emthemesModezBannersBlockAfterHeader">
+<div class="emthemesModez-section emthemesModez-section--banners-one">
+<div class="emthemesModez-section-inner">
+<div class="emthemesModez-bannersContainer emthemesModez-bannersContainer--one">
+<div class="emthemesModez-banner">
+<div class="emthemesModez-banner-container"><a href="#"><img class="emthemesModez-banner-image" src="https://placehold.it/1920x150?text=Content+or+Banner+can+turn+on/off+on+all+pages+or+other+pages" alt="After Header Position" /></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+```
+
+You can use button below to generate the code with your own banner image:
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockAfterHeaderModal">
+  Launch Banner Code Generator
+</button>
+
+- __Show on Page__: `Search Results Page`
+- __Visible__: Checked
+- __Location__: `Top of Page`
+
+
+
+
+
+
+
+
+
+
+## Main Slideshow / Carousel
+
+![Home 1 Main Carousel](img/home1-main-carousel.jpg)
+
+### Edit the slideshow
+
+Edit the slideshow in admin page > __Storefront Design__ > __Design Options__:
+
+![Edit homepage carousel](img/edit-homepage-carousel.png)
+
+
+### Colors Customization
+
+To customize color of the slideshow's elements, look into section __Carousel__ in the Theme Editor:
+
+![Theme editor carousel](img/theme-editor-carousel.png)
+
+### Hide the slideshow
+
+To hide the slideshow on homepage, uncheck on the checkbox __Show Carousel__ in section __Carousel__ of the Theme Editor.
 
 
 ## 2 Banners beside the main carousel
@@ -1038,7 +1250,7 @@ To show these banners on homepage, from your admin page > __Marketing__ > __Bann
 </div>
 ```
 
-![2 banners beside slideshow](img/edit-home1-2-banners-beside-slideshow.png)
+![Edit homepage 3 banners](img/edit-home1-2-banners-beside-slideshow.png)
 
 Then click __Update__ button to go back previous screen.
 
@@ -1054,194 +1266,219 @@ You can freely edit the HTML above to change banner images or link but keep the 
 
 
 
-## Best products by categories
-
-![best products by categories](img/home1-best-products-by-categories.jpg)
-
-* Automatically display products by category. Each category organized in tab.
-* By default it limits 5 categories. You can change this number by editing file `templates\components\papa-april-car\category\ajax-products-by-categories-tabs.html` change number in `limit categories 5`.
-* By default it display 8 products per tab. You can change this number by editing file `templates\components\papa-april-car\category\ajax-products-by-category-tabs-result.html` change number in `limit category.products 8`.
-* You can change text `Best` and `Best Sellers` by editing file `lang/en.json`:
-![edit best sellers text](img/edit-best-sellers-text.png)
-* You can change product colors, badget style and other settings in **Theme Editor** > **Products**.
 
 
-## Countdown banner section
-
-![countdown banner section](img/home1-countdown-banner.jpg)
 
 
-To display this banner on homepage, create a new banner in **Marketing** > **Banners**.
 
-* Input content below in **Banner Content** after click on button **Edit HTML Source**:
+
+## Featured / Bestselling / New In Product Tabs
+
+![Special products tabs](img/home1-special-product-tabs.jpg)
+
+You can configure this section in __Theme Editor__ > __Homepage__:
+
+![Theme Editor Special Products Tabs](img/theme-editor-special-products-tabs.png)
+
+
+## Products By Category
+
+![Products by category on homepage](img/home1-products-by-category.jpg)
+
+This section will show products by category. You can choose number of categories to display products. Categories are sorted by order specified in __Product Categories__ admin manager.
+
+
+### Hot Categories
+
+The __Hot Categories__ appears on the right is sub-categories of the current category.
+
+![Hot categories](img/home1-products-by-category-hot-categories.png)
+
+
+
+### Configuration 
+
+To configure this section, go to __Theme Editor__ > __Homepage__ > __Products by Category with Sorting Tabs__:
+
+![Configure products by category](img/theme-editor-products-by-category.png)
+
+
+
+
+
+
+## Top Categories
+
+![Top categories on homepage](img/home1-top-categories.jpg)
+
+This block show top categories and child categories sorted by order in Product Categories manager.
+
+### Configuration 
+
+You can configure number of categories to display in __Theme Editor__ > __Homepage__ > __Top Categories__:
+
+![Configure Top Categories](img/theme-editor-top-categories.png)
+
+
+
+
+
+
+## Fullwidth Banner on Homepage
+
+![fullwidth banner on homepage](img/home1-fullwidth-banner.jpg)
+
+To show these banners on homepage, from your admin page > __Marketing__ > __Banners __> click button __Create a Banner__. In field __Banner Content__, click button HTML to open __HTML Source Editor__, input content below:
 
 ```html
-<div id="emthemesModezBannersBlockHomeCountdown" class="papaAprilCar-countdownBanner">
-<div class="papaAprilCar-countdownBanner-background" style="background-image: url('https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-countdown-bg.jpg');">
-<div class="container">
-<div class="papaAprilCar-countdownBanner-img"><a href="#"><img class="wow slideInLeft" src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-countdown-img.png" alt="669x556" /></a>
-<div class="papaAprilCar-countdownBanner-badget wow bounceIn" data-wow-delay="1s">
-<p class="inner">only <strong>$299.00</strong></p>
-</div>
-</div>
-<div class="papaAprilCar-countdownBanner-content">
-<p class="papaAprilCar-countdownBanner-title wow slideInUp" style="background-image: url('https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-countdown-title-bg.png');">#APRILSTORE</p>
-<h3 class="papaAprilCar-countdownBanner-text wow tada" data-wow-delay="500ms"><a href="#">SALE UP TO 40% OFF</a></h3>
-<p class="papaAprilCar-countdownBanner-countdown wow fadeInUp" data-wow-delay="1s" data-countdown="2020-12-12T00:00:00Z"><span class="item"><span class="day" data-countdown-day="">00</span> <span class="label">days</span></span> <span class="item seperator">:</span> <span class="item"><span class="hour" data-countdown-hour="">00</span> <span class="label">hours</span></span> <span class="item seperator">:</span> <span class="item"><span class="min" data-countdown-min="">00</span> <span class="label">mins</span></span> <span class="item seperator">:</span> <span class="item"><span class="sec" data-countdown-sec="">00</span> <span class="label">secs</span></span></p>
+<div id="emthemesModezBannersBlockHome02" class="emthemesModez-section  emthemesModez-section--banners-one">
+<div class="emthemesModez-section-inner">
+<div class="emthemesModez-bannersContainer 
+            emthemesModez-bannersContainer--one 
+            emthemesModez-bannersContainer--one-1 
+            ">
+<div class="emthemesModez-banner">
+<div class="emthemesModez-banner-container"><a href="#"><img class="emthemesModez-banner-image" src="https://tvlgiao.github.io/bigcommerce-themes/supermarket/demo/images/banner04.jpg" alt="sample fullwidth banner" /></a></div>
 </div>
 </div>
 </div>
 </div>
 ```
 
-* **Show on Page**: `Home Page`.
-* **Location**: `Top of Page`.
+Or use button below to generate the code with your own banners:
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockHome02Modal">
+  Launch Banner Code Generator
+</button>
 
 
+![Edit homepage fullwidth banner](img/edit-home1-fullwidth-banner.png)
 
+Then click __Update__ button to go back previous screen.
 
-## 4 Column info text
+Choose __Show on Page__ is __Home Page__.
 
-![4 col info text](img/home1-4col-info-text.png)
+Choose __Location__ is __Top of Page__.
 
+![Show on Page & Location](img/edit-banner-show-on-page-location.png)
 
-To display this banner on homepage, create a new banner in **Marketing** > **Banners**.
+Click __Save__ button to finish.
 
-* Input content below in **Banner Content** after click on button **Edit HTML Source**:
-
-```html
-<div id="emthemesModezBannersBlockHome4ColInfo" class="papaAprilCar-4colInfo">
-<div class="container">
-<div class="papaAprilCar-4colInfo-col wow slideInUp">
-<div class="papaAprilCar-4colInfo-col-icon"><img src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-4col-info-icon1.png" alt="30x30" /></div>
-<h3 class="papaAprilCar-4colInfo-col-heading">30 DAYS RETURN</h3>
-<p class="papaAprilCar-4colInfo-col-text">Phasellus rhoncus a dui quis elemen turn. In non feugiat massa. Proin luctus, ligula pharetra quam.</p>
-</div>
-<div class="papaAprilCar-4colInfo-col wow slideInUp" data-wow-delay="200ms">
-<div class="papaAprilCar-4colInfo-col-icon"><img src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-4col-info-icon2.png" alt="30x30" /></div>
-<h3 class="papaAprilCar-4colInfo-col-heading">FREE DELIVERY</h3>
-<p class="papaAprilCar-4colInfo-col-text">Suspendisse dapibus vestibulum justo sed rhoncus. Cras vehicula quam sem, sed ornare rutrumeu.</p>
-</div>
-<div class="papaAprilCar-4colInfo-col wow slideInUp" data-wow-delay="400ms">
-<div class="papaAprilCar-4colInfo-col-icon"><img src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-4col-info-icon3.png" alt="30x30" /></div>
-<h3 class="papaAprilCar-4colInfo-col-heading">SECURE RETURNS</h3>
-<p class="papaAprilCar-4colInfo-col-text">Quisque porta magna erat, eu feugiat felis finibus luctus. Sed risus libero, viver raet, orci pharetra.</p>
-</div>
-<div class="papaAprilCar-4colInfo-col wow slideInUp" data-wow-delay="600ms">
-<div class="papaAprilCar-4colInfo-col-icon"><img src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-4col-info-icon4.png" alt="30x30" /></div>
-<h3 class="papaAprilCar-4colInfo-col-heading">ONLINE SUPPORT 24/7</h3>
-<p class="papaAprilCar-4colInfo-col-text">Maximus nibh nec turpis ultricies, euismod posuere justo mollis. Duis malesuada blandit mauris.</p>
-</div>
-</div>
-</div>
-```
-
-* **Show on Page**: `Home Page`.
-* **Location**: `Top of Page`.
+You can freely edit the HTML above to change banner images or link but keep the HTML attribute `id="emthemesModezBannersBlockHome02"` unchanged.
 
 
 
 
 
-## Special products tabs
+## Brand Carousel
 
-![special products tabs](img/home1-special-products-tabs.jpg)
-
-This section display **new products**, **bestselling products** and **featured products** in tabs.
-
-* You can change the title text in language file `lang/en.json`, section `caril` > `special_tabs`.
-* You can configure number of products in **Theme Editor** > **Homepage** > **Special Products Tabs** > **Number of Products**. 
+![Brand Carousel](img/home1-brand-carousel.png)
 
 
-
-
-
-
-## Car driving banner section
-
-![car driving banner](img/home1-driving-banner.jpg)
-
-
-To display this banner on homepage, create a new banner in **Marketing** > **Banners**.
-
-* Input content below in **Banner Content** after click on button **Edit HTML Source**:
+To show this carousel on homepage, from your admin page > __Marketing__ > __Banners __> click button __Create a Banner__. In field __Banner Content__, click button HTML to open __HTML Source Editor__, input content below:
 
 ```html
-<div id="emthemesModezBannersBlockHomeDriving" class="papaAprilCar-drivingBanner">
-<div class="papaAprilCar-drivingBanner-background" style="background-image: url('https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-driving-bg.png');">
-<div class="container">
-<div class="papaAprilCar-drivingBanner-content wow slideInUp">
-<h3 class="papaAprilCar-drivingBanner-title"><a href="#">FOR COMFOTABLE DRIVING</a></h3>
-<p class="papaAprilCar-drivingBanner-text">KEEP YOUR CAR AS GOOD AS NEW</p>
-</div>
-<div class="papaAprilCar-drivingBanner-img wow slideInLeft" data-wow-delay="500ms"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/caril/demo/images/home-driving-img.png" alt="1068x273" /></a>
-<div class="papaAprilCar-drivingBanner-badget wow bounceIn" data-wow-delay="1s">
-<div class="inner"><a href="#">SHOP<small>NOW</small></a></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-```
-
-* **Show on Page**: `Home Page`.
-* **Location**: `Top of Page`.
-
-
-
-
-## Brands carousel
-
-![brands carousel](img/home1-brand-carousel.png)
-
-To display this banner on homepage, create a new banner in **Marketing** > **Banners**.
-
-* Input content below in **Banner Content** after click on button **Edit HTML Source**:
-
-```html
-<div class="papaAprilCar-brand-wrap">
-<div class="container">
-<div id="emthemesModezBannersBlockBrandsCarousel" class="emthemesModez-brandCarousel-container" data-section-type="brands-logo">
+<div id="emthemesModezBannersBlockHome03" class="emthemesModez-brandCarousel-container" data-section-type="brands-logo">
 <div class="emthemesModez-brandCarousel" data-emthemesmodez-brand-carousel="">
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="0"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png" alt="Sample Brand 1" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="0.2s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png" alt="Sample Brand 2" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="0.4s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png" alt="Sample Brand 3" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="0.6s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png" alt="Sample Brand 4" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="0.8s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png" alt="Sample Brand 5" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="1s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png" alt="Sample Brand 6" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="1.2s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png" alt="Sample Brand 7" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="1.4s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png" alt="Sample Brand 8" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="1.6s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png" alt="Sample Brand 9" /></a></div>
-<div class="emthemesModez-brandCarousel-slide wow slideInUp" data-wow-delay="1.8s"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png" alt="Sample Brand 10" /></a></div>
-</div>
-</div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png" alt="Sample Brand 1" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png" alt="Sample Brand 2" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png" alt="Sample Brand 3" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png" alt="Sample Brand 4" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png" alt="Sample Brand 5" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand01.png" alt="Sample Brand 6" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand02.png" alt="Sample Brand 7" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand03.png" alt="Sample Brand 8" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand04.png" alt="Sample Brand 9" /></a></div>
+<div class="emthemesModez-brandCarousel-slide"><a href="#"><img src="https://tvlgiao.github.io/bigcommerce-themes/laparis/demo/images/brand05.png" alt="Sample Brand 10" /></a></div>
 </div>
 </div>
 ```
 
-* **Show on Page**: `Home Page`.
-* **Location**: `Top of Page`.
+Or use button below to generate the code:
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#bannersBlockHome03Modal">
+  Launch Banner Code Generator
+</button>
+
+
+
+![Edit homepage fullwidth banner](img/edit-home1-fullwidth-banner.png)
+
+Then click __Update__ button to go back previous screen.
+
+Choose __Show on Page__ is __Home Page__.
+
+Choose __Location__ is __Top of Page__.
+
+![Show on Page & Location](img/edit-banner-show-on-page-location.png)
+
+Click __Save__ button to finish.
+
+You can freely edit the HTML above to change banner images or link but keep the HTML attribute `id="emthemesModezBannersBlockHome03"` unchanged.
 
 
 
 
 
-## Footer
-
-![footer](img/home1-footer.png)
-
-* Footer background image can be changed by editing file `templates\components\papa-april-car\footer.html` replace `{{cdn '/assets/img/bg-footer.jpg'}}` by your own image URL. You upload image in **Storefront** > **Image Manager** and paste link here.
-* You can configure footer content and colors in **Theme Editor** > **Footer**.
-* Heading label like Navigate, Categories can be changed in the language file `lang/en.json`, find section `footer`, `newsletter` > `subscribe`.
-* Social icons can be input in **Storefront** > **Social Media Links**.
 
 
 
-## Vertical categories menu
+## Special Product Columns
 
-![vertical categories menu](img/vertical-categories-menu.png)
 
-Vertical categories menu support slide down sub-categoires and mega-menu categories. You can toggle slide-down or mega menu in **Theme Editor** > **Header** > **Showing sub-categories vertical**.
+![Special product columns](img/home1-special-product-columns.jpg)
+
+This block show bestselling products, featured products, new products in columns.
+
+You can configure this block in Theme Editor > Homepage > Special Products Columns:
+
+![Configure special products columns](img/theme-editor-special-products-columns.png)
+
+
+
+
+
+
+
+
+## Footer - Newsletter
+
+![Newsletter](img/home1-newsletter.png)
+
+You can configure the newsletter block, show/hide or change color in __Theme Editor__ > __Footer__ > __Newsletter__:
+
+![Configure newsletter](img/theme-editor-newsletter.png)
+
+
+## Footer - Links
+
+![Footer](img/home1-footer.png)
+
+You can change colors in __Theme Editor__ > __Footer__:
+
+![Theme editor main footer](img/theme-editor-main-footer.png)
+
+You can also show/hide about us block, pages, categories, brands, configure number of links to show.
+
+
+
+## Footer - Payment Icons
+
+![Theme editor payment icons](img/theme-editor-payment-icons.png)
+
+To show/hide payment icons, go to Theme __Editor__ > __Payment Icons__ secitons, check or uncheck any icons you want to show or hide.
+
+
+
+
+## Footer - Credit Links
+
+![Theme editor credit links](img/theme-editor-credits.png)
+
+To show/hide the credit links, go to Theme Editor > __Footer__ section, tick or untick the checkboxes as showing above.
+
 
 
 ## Banners on the Left Sidebar
@@ -1346,6 +1583,8 @@ You can show your own Facebook Like Page block or hide it completely.
 From __Theme Editor__ > __Social Media Icons__ > Enter your facebook page name in __Facebook page__ field. For example if your Facebook page URL is <https://www.facebook.com/papathemes/> you should only input `papathemes`.
 
 To hide this block, just leave it empty value.
+
+
 
 
 
@@ -1484,6 +1723,18 @@ Copy and paste the sample code below:
 
 
 
-## Add your own custom CSS or Javascript
 
-You can add your own custom CSS code or Javascript by adding in **Storefront** > **Footer Script**. It is recommended to add here in order to keep your customization when the theme is updated.
+
+
+
+## Add our own CSS (Sass) code
+
+To add your own custom CSS code you can edit the file `assets/scss/_theme-custom.scss` in __Edit Theme Files__ editor:
+
+![Edit file _theme-custom.scss](img/edit-file-theme-custom-css.png)
+
+__Note: __
+
+- Copy / backup this file for future theme upgrade.
+- Add custom CSS code required CSS (or Sass) programming skill. It's not recommended for new users.
+

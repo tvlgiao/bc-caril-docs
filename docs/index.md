@@ -1,6 +1,6 @@
-# User Guide - BigCommerce Theme Supermarket
+# User Guide - BigCommerce Theme Caril
 
-Theme Version: 1.0.2 (2017-06-28)
+Theme Version: 1.0.0 (2017-12-08)
 
 Theme designed and developed by [papathemes](https://papathemes.com) 
 

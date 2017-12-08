@@ -1,2 +1,2 @@
-# bc-sarahmarket-docs
-Documentation for the BigCommerce Theme SarahMarket by tvlgiao
+# bc-caril-docs
+Documentation for the BigCommerce Theme Caril by tvlgiao
