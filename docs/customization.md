@@ -1016,6 +1016,26 @@
 
 
 
+## Multi-tier Categories for Vehicle Filter
+
+![Vehicle Filter](img/vehicle-filter.png)
+
+To enable this multi-tier categories filter bar, go to **Theme Editor** > **Products**, enter the parent category ID in text box **Category ID of Vehicle Filter**:
+
+![Theme editor - vehicle filter](img/theme-editor-vehicle-filter.png)
+
+Below is an example for how to organize categories used for vehicle filter:
+
+![Vehicle filter categories](img/vehicle-filter-categories.png)
+
+To change labels like `Select your vehicle`, `Select Make`, `Select Year`, `Select Model`... you can edit the language file `lang/en.json`, edit text in section `vehicle_filter` as showing below:
+
+![Edit language for vehicle filter](img/edit-language-vehicle-filter.png)
+
+
+
+
+
 ## Main Carousel
 
 ![Main carousel](img/home1-main-carousel.jpg)
