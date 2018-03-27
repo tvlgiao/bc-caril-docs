@@ -1028,6 +1028,8 @@ Below is an example for how to organize categories used for vehicle filter:
 
 ![Vehicle filter categories](img/vehicle-filter-categories.png)
 
+Next step, go to **Store Settup** > **Store Settings** > **Display** tab, in **Category Settings** panel, choose **Menu Display Depth** = `4` or higher.
+
 To change labels like `Select your vehicle`, `Select Make`, `Select Year`, `Select Model`... you can edit the language file `lang/en.json`, edit text in section `vehicle_filter` as showing below:
 
 ![Edit language for vehicle filter](img/edit-language-vehicle-filter.png)
