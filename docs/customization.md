@@ -1509,3 +1509,13 @@ Copy and paste the sample code below:
 ## Add your own custom CSS or Javascript
 
 You can add your own custom CSS code or Javascript by adding in **Storefront** > **Footer Script**. It is recommended to add here in order to keep your customization when the theme is updated.
+
+
+
+## MOD vehicle filter to 4-tier categories
+
+Apply this [patch](https://gist.github.com/tvlgiao/42d7e28cdddbab6f9807c00ab1576130) to your theme by running the below command from your theme root folder:
+
+```
+patch -p1 . < caril-4tier-vehicle-filter.diff
+```
